@@ -1,0 +1,52 @@
+import { Text,View, StyleSheet,Image } from 'react-native';
+
+import Ionicons from '@expo/vector-icons/Ionicons';
+
+import AssetExample from './components/AssetExample';
+export default function App() {
+  return (
+  <View style={styles.container}>
+  <View style={styles.container2}><Ionicons name="arrow-left" size={32}/> 
+  <Text style={styles.paragraph1}>Notifications</Text></View>
+  <Image style={styles.image} source={{
+  uri:"data:image/png;base64,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"}}/>
+    <Text style={styles.paragraph2}>No nofication yet !</Text>
+  </View>
+
+  );
+}
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    padding: 8,
+    marginLeft:7
+  },
+   container2: {
+    flexDirection:"row",
+    padding: 8,
+    marginLeft:7,
+   alignItems:"center",
+   marginTop:15
+  }
+  ,
+  paragraph1: {
+    fontSize: 25,
+    fontWeight: 'bold',
+    textAlign: 'center',
+    color:"red",
+   paddingLeft:70,
+   alignself:"center"
+  },
+  image:{
+  height:"70%",
+  width:"100%"
+  },
+   paragraph2: {
+
+    textAlign: 'center',
+   fontSize:22,
+  
+  },
+  
+});
